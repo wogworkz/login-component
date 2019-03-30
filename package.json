@@ -1,0 +1,38 @@
+{
+  "name": "login-component",
+  "version": "0.0.0-development",
+  "main": "dist/login-component.js",
+  "description": "Customizable UI component to log in with cognito user pools",
+  "license": "MIT",
+  "dependencies": {
+    "amazon-cognito-identity-js": "^3.0.9",
+    "lit-element": "^2.1.0"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^2.0.1",
+    "eslint": "^5.15.3",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "json-loader": "^0.5.7",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1",
+    "webpack-merge": "^4.2.1",
+    "semantic-release": "^15.13.3"
+  },
+  "scripts": {
+    "build": "webpack --config webpack.prod.js",
+    "lint": "eslint --fix src/**/*.js",
+    "watch": "webpack --watch",
+    "start": "webpack-dev-server --open --config webpack.dev.js",
+    "semantic-release": "semantic-release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wogworkz/login-component.git"
+  }
+}
