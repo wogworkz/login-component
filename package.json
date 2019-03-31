@@ -29,7 +29,7 @@
     "lint": "eslint --fix src/**/*.js",
     "watch": "webpack --watch",
     "start": "webpack-dev-server --open --config webpack.dev.js",
-    "semantic-release": "semantic-release"
+    "semantic-release": "npx semantic-release"
   },
   "repository": {
     "type": "git",
