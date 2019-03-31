@@ -1,6 +1,6 @@
 {
   "name": "login-component",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "main": "dist/login-component.js",
   "description": "Customizable UI component to log in with cognito user pools",
   "license": "MIT",
