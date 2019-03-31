@@ -9,5 +9,5 @@ script:
   - yarn 
   - yarn lint
   - yarn build
-after success:
+after_success:
   - yarn semantic-release
