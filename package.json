@@ -33,6 +33,9 @@
     "start": "webpack-dev-server --open --config webpack.dev.js",
     "semantic-release": "semantic-release"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/wogworkz/login-component.git"
