@@ -19,7 +19,6 @@ module.exports = {
     port: 8080
   },
   output: {
-    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     library: 'login-component',
     libraryTarget: 'umd',
