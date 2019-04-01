@@ -1,6 +1,6 @@
 {
   "name": "@wogworkz/login-component",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "main": "dist/login-component.js",
   "description": "Customizable UI component to log in with cognito user pools",
   "license": "MIT",
