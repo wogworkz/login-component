@@ -2,6 +2,7 @@ import * as AmazonCognitoIdentity from 'amazon-cognito-identity-js'
 import { LitElement, html, css } from 'lit-element'
 
 class LoginComponent extends LitElement {
+
   static get properties () {
     return {
       username: { type: String },
@@ -79,7 +80,7 @@ class LoginComponent extends LitElement {
     this.password = e.target.value
   }
 
-  clickHandler (event) {
+  clickHandler () {
     let poolData = {
       UserPoolId: this.userPoolId,
       ClientId: this.clientId
@@ -98,10 +99,10 @@ class LoginComponent extends LitElement {
 
     let promise = new Promise(function (resolve, reject) {
       cognitoUser.authenticateUser(authenicationDetails, {
-        onSuccess: function (result) {
+        onSuccess: function () {
           resolve('completed')
         },
-        onFailure: function (result) {
+        onFailure: function () {
           reject(new Error('..'))
         }
       })
