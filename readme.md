@@ -1,5 +1,5 @@
 # AWS Cognito Login Component
-A simple web component for logging into AWS ognito 
+A simple web component for logging into AWS Cognito 
 
 [![Build Status](https://travis-ci.org/wogworkz/login-component.svg?branch=master)](https://travis-ci.org/wogworkz/login-component)
 [![Published on npm](https://img.shields.io/npm/v/@wogworkz/login-component.svg)](https://www.npmjs.com/package/@wogworkz/login-component)
