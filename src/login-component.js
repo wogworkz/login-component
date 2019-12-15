@@ -2,7 +2,6 @@ import * as AmazonCognitoIdentity from 'amazon-cognito-identity-js'
 import { LitElement, html, css } from 'lit-element'
 
 class LoginComponent extends LitElement {
-
   static get properties () {
     return {
       username: { type: String },
@@ -10,6 +9,7 @@ class LoginComponent extends LitElement {
       redirectUrl: { type: String },
       userPoolId: { type: String },
       clientId: { type: String },
+      redirect: { type: Boolean },
       errorMessage: { reflect: true }
     }
   }
@@ -58,7 +58,8 @@ class LoginComponent extends LitElement {
   }
 
   render () {
-    return html`<div class="container">
+    if (!this.getUserFromStorage()) {
+      return html`<div class="container">
             <label for="uname"><b>Username</b></label>
             <input type="text" placeholder="Enter Username" name="uname" .value=${this.username} @input=${this.handleUsername} required>
             <label for="psw"><b>Password</b></label>
@@ -67,7 +68,11 @@ class LoginComponent extends LitElement {
             <button @click=${this.clickHandler} type="submit">Login</button>
         </div>
         `
+    } else {
+      return ``
+    }
   }
+
   attributeChangedCallback (name, oldval, newval) {
     super.attributeChangedCallback(name, oldval, newval)
   }
@@ -78,6 +83,15 @@ class LoginComponent extends LitElement {
 
   handlePassword (e) {
     this.password = e.target.value
+  }
+
+  getUserFromStorage () {
+    let poolData = {
+      UserPoolId: this.userPoolId,
+      ClientId: this.clientId
+    }
+    let userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData)
+    return userPool.getCurrentUser()
   }
 
   clickHandler () {
@@ -109,7 +123,9 @@ class LoginComponent extends LitElement {
     })
     promise.then(data => {
       if (data === 'completed') {
-        window.location.href = this.redirectUrl
+        if (this.redirect) {
+          window.location.href = this.redirectUrl
+        }
         this.errorMessage = false
       }
     },
@@ -119,4 +135,5 @@ class LoginComponent extends LitElement {
     })
   }
 }
+
 customElements.define('login-component', LoginComponent)

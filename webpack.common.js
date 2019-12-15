@@ -1,6 +1,6 @@
-const path = require('path');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path')
+
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: {
@@ -10,7 +10,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Production',
       template: 'index.html',
-      inject:'head'
+      inject: 'head'
     })
   ],
   devServer: {
@@ -24,4 +24,4 @@ module.exports = {
     libraryTarget: 'umd',
     umdNamedDefine: true
   }
-};
+}
