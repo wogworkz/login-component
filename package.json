@@ -5,26 +5,26 @@
   "description": "Customizable UI component to log in with cognito user pools",
   "license": "MIT",
   "dependencies": {
-    "amazon-cognito-identity-js": "^3.0.9",
-    "lit-element": "^2.1.0"
+    "amazon-cognito-identity-js": "^3.2.0",
+    "lit-element": "^2.2.1"
   },
   "devDependencies": {
-    "@semantic-release/exec": "^3.3.2",
-    "@semantic-release/git": "^7.0.8",
-    "clean-webpack-plugin": "^2.0.1",
-    "eslint": "^5.15.3",
-    "eslint-config-standard": "^12.0.0",
-    "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-node": "^8.0.1",
-    "eslint-plugin-promise": "^4.0.1",
-    "eslint-plugin-standard": "^4.0.0",
+    "@semantic-release/exec": "^3.3.8",
+    "@semantic-release/git": "^7.0.18",
+    "clean-webpack-plugin": "^3.0.0",
+    "eslint": "^6.7.2",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
     "html-webpack-plugin": "^3.2.0",
     "json-loader": "^0.5.7",
-    "semantic-release": "^15.13.3",
-    "webpack": "^4.29.6",
-    "webpack-cli": "^3.3.0",
-    "webpack-dev-server": "^3.2.1",
-    "webpack-merge": "^4.2.1"
+    "semantic-release": "^15.13.31",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0",
+    "webpack-merge": "^4.2.2"
   },
   "scripts": {
     "build": "webpack --config webpack.prod.js --colors",
